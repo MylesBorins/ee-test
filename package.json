@@ -1,0 +1,19 @@
+{
+  "name": "ee-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./bin/compare.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^6.3.3",
+    "map-stream": "0.0.5"
+  },
+  "devDependencies": {
+    "vinyl-fs": "^0.3.13"
+  }
+}
