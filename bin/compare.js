@@ -6,6 +6,7 @@ var fs = require('vinyl-fs');
 var browserify = require('browserify');
 var map = require('map-stream');
 
+var filesize = require('filesize');
 var chalk = require('chalk');
 
 var green = chalk.green;
@@ -16,7 +17,7 @@ function build(file, cb) {
   b.add(file.path);
   b.bundle(function (err, src) {
     console.log([green('filename:'), path.basename(file.path)].join(' '));
-    console.log([yellow('Bundled size:'), src.length / 1000 + 'K\n'].join(' '));
+    console.log([yellow('Bundled size:'), filesize(src.length) + '\n'].join(' '));
     cb(null, file);
   });
 }
