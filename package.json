@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "browserify": "^6.3.3",
-    "map-stream": "0.0.5"
+    "map-stream": "0.0.5",
+    "pubsub-js": "^1.5.0"
   },
   "devDependencies": {
     "vinyl-fs": "^0.3.13"
