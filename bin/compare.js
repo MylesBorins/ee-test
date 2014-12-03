@@ -17,7 +17,6 @@ var yellow = chalk.yellow;
 function build(file, cb) {
   var b = browserify();
   b.add(file.path);
-  b.transform('uglifyify');
   b.bundle(function (err, src) {
     var minified = uglify.minify(src.toString(), {fromString: true});
     console.log([green('filename:'), path.basename(file.path)].join(' '));
